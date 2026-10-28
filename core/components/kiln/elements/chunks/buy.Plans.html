@@ -1,0 +1,55 @@
+<div class="k-buy">
+  [[+alert]]
+  [[+test:is=`1`:then=`<div class="k-callout" role="note"><strong>Test mode.</strong> Checkout uses a pretend payment page and no money moves.</div>`]]
+  <div class="k-plans k-plans--3">
+    <div class="k-card k-plan">
+      <span class="k-plan__name">Pro · Annual</span>
+      <div class="k-plan__price">[[+price_annual]]<small>/ year</small></div>
+      <p class="k-plan__desc">Every Pro feature, renewed each year.</p>
+      <ul>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Unlimited sites and every Pro tool</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>On all your own computers</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Cancel any time; it runs to the end of the year</li>
+      </ul>
+      <form method="post">
+        <input type="hidden" name="csrf" value="[[+csrf]]"><input type="hidden" name="do" value="add"><input type="hidden" name="plan" value="annual">
+        <button class="k-btn k-btn--ghost k-btn--lg k-btn--block" type="submit">Add to cart</button>
+      </form>
+    </div>
+    <div class="k-card k-plan k-plan--pro">
+      <span class="k-plan-border" aria-hidden="true"></span>
+      <span class="k-plan__name">Pro · Lifetime</span>
+      <div class="k-plan__price">[[+price_lifetime]]<small>once</small></div>
+      <p class="k-plan__desc">Pay once. Your key never expires.</p>
+      <ul>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Unlimited sites and every Pro tool</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>On all your own computers</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>No renewals, ever</li>
+      </ul>
+      <form method="post">
+        <input type="hidden" name="csrf" value="[[+csrf]]"><input type="hidden" name="do" value="add"><input type="hidden" name="plan" value="lifetime">
+        <button class="k-btn k-btn--heat k-btn--lg k-btn--block" type="submit">Add to cart</button>
+      </form>
+    </div>
+    <div class="k-card k-plan">
+      <span class="k-plan__name">Pro · Team</span>
+      <div class="k-plan__price">[[+price_seat]]<small>/ seat / year</small></div>
+      <p class="k-plan__desc">For studios and agencies. Each person gets their own key.</p>
+      <ul>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>From [[+min_seats]] seats</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Hand out seats by email from your account</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Move a seat to someone else any time</li>
+      </ul>
+      <form method="post" class="k-form">
+        <input type="hidden" name="csrf" value="[[+csrf]]"><input type="hidden" name="do" value="add"><input type="hidden" name="plan" value="team">
+        <div class="k-plan__seats">
+          <label class="form-label" for="team-seats">Seats</label>
+          <input class="form-control" type="number" id="team-seats" name="seats" value="[[+seats]]" min="[[+min_seats]]" max="500" required>
+        </div>
+        <button class="k-btn k-btn--ghost k-btn--lg k-btn--block" type="submit">Add team to cart</button>
+      </form>
+    </div>
+  </div>
+  <p class="k-buy__note">Prices in [[+currency]].</p>
+  [[+cart]]
+</div>

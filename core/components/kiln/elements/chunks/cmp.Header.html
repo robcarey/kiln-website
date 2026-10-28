@@ -1,0 +1,32 @@
+<a class="k-skip" href="#main">Skip to content</a>
+[[$cmp.Icons]]
+<header class="k-nav" data-k-nav data-bs-theme="dark">
+  <div class="container k-container-wide k-nav__inner">
+    <a class="k-brand" href="[[~[[++site_start]]]]" aria-label="[[++site_name]] home">
+      <img class="k-on-dark" src="[[++kiln.theme_url]]images/kiln-wordmark-on-dark.png" alt="[[++site_name]]" width="95" height="45">
+      <img class="k-on-light" src="[[++kiln.theme_url]]images/kiln-wordmark-on-light.png" alt="[[++site_name]]" width="95" height="45">
+    </a>
+    <nav aria-label="Main">
+      [[pdoMenu?
+        &parents=`0`
+        &level=`1`
+        &tplOuter=`@INLINE <ul class="k-nav__links">[[+wrapper]]</ul>`
+        &tpl=`nav.tpl.Row`
+        &hereClass=`active`
+        &selfClass=`active`
+        &firstClass=``
+        &lastClass=``
+      ]]
+    </nav>
+    <div class="k-nav__actions">
+      [[$cmp.ThemeToggle]]
+      [[!kiln.Account? &action=`navlink`]]
+      <a class="k-btn k-btn--heat k-btn--sm k-nav__cta" href="[[~[[++kiln.page_download]]]]">
+        <svg aria-hidden="true"><use href="#i-download"/></svg>Download
+      </a>
+      <button class="k-nav__burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#kNavMobile" aria-controls="kNavMobile" aria-label="Open menu">
+        <svg aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,15 @@
+<section class="k-pagehero[[*heroStyle:is=`plain`:then=` k-pagehero--plain`]][[*heroStyle:is=`compact`:then=` k-pagehero--plain k-pagehero--compact`]]" data-bs-theme="dark">
+  [[*heroStyle:is=`embers`:then=`<video class="k-pagehero__video" data-k-video muted loop playsinline preload="none" poster="[[++kiln.theme_url]]images/poster-sparks.webp" aria-hidden="true"><source data-src="[[++kiln.theme_url]]video/kiln-hero.mp4" type="video/mp4"></video>`]]
+  <div class="k-grain" aria-hidden="true"></div>
+  <div class="container k-container-wide" style="position:relative;z-index:4">
+    [[pdoCrumbs?
+      &showHome=`1`
+      &tplWrapper=`@INLINE <nav aria-label="Breadcrumb"><ol class="k-crumbs">[[+output]]</ol></nav>`
+      &tpl=`@INLINE <li><a href="[[+link]]">[[+menutitle]]</a></li>`
+      &tplCurrent=`@INLINE <li aria-current="page">[[+menutitle]]</li>`
+    ]]
+    [[*heroEyebrow:notempty=`<span class="k-eyebrow">[[*heroEyebrow]]</span>`]]
+    <h1>[[*longtitle:default=`[[*pagetitle]]`]]</h1>
+    [[*heroSubtitle:notempty=`<p class="k-lead">[[*heroSubtitle]]</p>`]]
+  </div>
+</section>

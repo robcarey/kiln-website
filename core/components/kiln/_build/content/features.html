@@ -1,0 +1,61 @@
+<h2>Sites that behave like production</h2>
+<p>Every project gets a real hostname — <code>acme-shop.test</code>, not <code>localhost/acme-shop</code> — with its own document root, aliases and settings. Kiln writes the hosts entries for you in a single step.</p>
+<ul>
+  <li><strong>Apache and nginx at the same time.</strong> Both servers run on ports 80 and 443 side by side. Choose per site, and keep ports out of the URLs your CMS stores.</li>
+  <li><strong>Front-controller presets</strong> for WordPress, Laravel and Symfony, so pretty permalinks work on either server.</li>
+  <li><strong>Live logs per site</strong> — error and access tabs that update as requests come in.</li>
+  <li><strong>Server config without the hunting.</strong> Tune Apache and nginx from the app, toggle modules, and add global or per-site directives.</li>
+</ul>
+
+<h2>Any PHP, per site</h2>
+<p>Install the PHP versions you need and give each site its own. They all run at once, so a legacy client on 7.4 and a fresh build on 8.5 can sit side by side.</p>
+<ul>
+  <li>Windows: PHP 7.0 through 8.5, including older releases for legacy work.</li>
+  <li>Apple Silicon Macs: PHP 7.4 through 8.5. Intel Macs: PHP 8.1 through 8.5.</li>
+  <li>Per-version extension toggles and a full <code>php.ini</code> editor.</li>
+</ul>
+
+<h2>Trusted HTTPS, automatically</h2>
+<p>Kiln runs a local certificate authority and installs it where your browsers look, then issues a certificate for every site — including its aliases. Certificates renew themselves before they expire and whenever a site’s names change. No warnings, no click-through.</p>
+
+<h2>MariaDB and phpMyAdmin</h2>
+<ul>
+  <li>Create and drop databases, manage the root password and edit server options from the app.</li>
+  <li>Each site gets its own database user, provisioned automatically.</li>
+  <li>phpMyAdmin installs on demand.</li>
+  <li><strong>Pro:</strong> sync databases with your remote hosts.</li>
+</ul>
+
+<h2>Mail that never leaves your machine</h2>
+<p>A built-in mail catcher receives everything your sites send — on Windows and macOS — and shows it in a proper inbox with an unread badge. It accepts any SMTP login, so sites configured for a real mail server work unchanged, and it only listens on your own computer.</p>
+
+<h2>Command-line tools, scoped to the site</h2>
+<p>Composer and WP-CLI are built in. Open a terminal from any site and <code>php</code>, <code>composer</code>, <code>wp</code> and <code>mysql</code> are the exact versions that site uses — without touching your system PATH.</p>
+
+<h2>One-click CMS installs <span class="k-badge k-badge--pro">PRO</span></h2>
+<p>WordPress, MODX (3.x and 2.x), Joomla and Grav. Pick a version from the official release feed and Kiln downloads it, creates the database and user, and opens the web installer with the connection details on screen.</p>
+
+<h2>Sync and deploy</h2>
+<ul>
+  <li>Push or pull files over SFTP, FTP, FTPS or SSH, with a preview of every change before it runs.</li>
+  <li>Saved transfer profiles, exclude patterns, size and type filters, and optional removal of orphaned files.</li>
+  <li>Credentials encrypted at rest; SSH host keys pinned on first connect.</li>
+  <li>MODX sites are re-configured for your machine after a pull.</li>
+</ul>
+
+<h2>A design studio for your theme</h2>
+<p>Generate and lock palettes, check every colour pair for contrast, choose self-hosted web fonts, and tune shape, motion, breakpoints and type. Preview it live in light and dark, add from a library of front-end add-ons, and start from theme scaffolds for WordPress, MODX, Joomla and Grav. Frameworks: Bootstrap, Tailwind CSS, Bulma, UIkit and Pico CSS. <strong>Pro</strong> builds the finished theme into your site.</p>
+
+<h2>Test on real devices</h2>
+<p>Your sites can be reached from phones and tablets on the same Wi-Fi network, using your computer’s network address.</p>
+
+<h2>Move sites in one file</h2>
+<p>Export a site to a <code>.kiln</code> file — optionally with a zip of its files and a full database dump — or export every site at once. Import on any machine running Kiln.</p>
+
+<h2>A clean, self-contained install</h2>
+<ul>
+  <li>The setup check runs on first launch and offers a Fix button for anything amiss.</li>
+  <li>Runtimes, configs, certificates and logs live in one data folder.</li>
+  <li>Start, stop and monitor everything from the system tray or menu bar.</li>
+  <li>Uninstall from Settings removes the certificate authority, hosts entries and helpers Kiln added — and the data folder, if you choose.</li>
+</ul>

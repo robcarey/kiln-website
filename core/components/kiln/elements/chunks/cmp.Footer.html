@@ -1,0 +1,59 @@
+<footer class="k-footer">
+  <div class="container k-container-wide">
+    <div class="k-footer__grid">
+      <div class="k-footer__brand">
+        <img class="k-on-dark" src="[[++kiln.theme_url]]images/kiln-wordmark-on-dark.png" alt="[[++site_name]]" width="95" height="45" loading="lazy">
+        <img class="k-on-light" src="[[++kiln.theme_url]]images/kiln-wordmark-on-light.png" alt="[[++site_name]]" width="95" height="45" loading="lazy">
+        <p>[[++kiln.tagline]] The complete local web stack for Windows and macOS.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="[[~[[++kiln.page_features]]]]">Features</a></li>
+          <li><a href="[[~[[++kiln.page_compare]]]]">Free vs Pro</a></li>
+          <li><a href="[[~[[++site_start]]]]#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Kiln</h4>
+        <ul>
+          <li><a href="[[~[[++kiln.page_download]]]]">Download</a></li>
+          <li><a href="[[~[[++kiln.page_buy]]]]">Buy Pro</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="[[~[[++kiln.page_contact]]]]">Contact</a></li>
+          <li><a href="mailto:[[++kiln.support_email]]">[[++kiln.support_email]]</a></li>
+        </ul>
+      </div>
+    </div>
+    <span class="k-footer__word" aria-hidden="true">kiln</span>
+    <div class="k-footer__bottom">
+      <span>&copy; <span data-k-year>2026</span> [[++site_name]]. All rights reserved.</span>
+      <span>Version [[++kiln.current_version]] · Windows · macOS</span>
+    </div>
+  </div>
+</footer>
+
+<div class="offcanvas offcanvas-end k-offcanvas" tabindex="-1" id="kNavMobile" aria-labelledby="kNavMobileLabel">
+  <div class="offcanvas-header">
+    <span class="offcanvas-title k-mono k-muted" id="kNavMobileLabel">Menu</span>
+    <button type="button" class="k-theme-toggle" data-bs-dismiss="offcanvas" aria-label="Close menu"><svg aria-hidden="true" style="width:1.2rem;height:1.2rem"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="offcanvas-body">
+    [[pdoMenu?
+      &parents=`0`
+      &level=`1`
+      &tplOuter=`@INLINE <ul class="k-offcanvas__links">[[+wrapper]]</ul>`
+      &tpl=`nav.tpl.Row`
+      &hereClass=`active`
+      &selfClass=`active`
+      &firstClass=``
+      &lastClass=``
+    ]]
+    <div class="k-offcanvas__account">[[!kiln.Account? &action=`navlink`]]</div>
+    <a class="k-btn k-btn--heat k-btn--lg k-btn--block" href="[[~[[++kiln.page_download]]]]"><svg aria-hidden="true"><use href="#i-download"/></svg>Download Kiln free</a>
+  </div>
+</div>

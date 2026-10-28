@@ -1,0 +1,25 @@
+<section class="k-section k-section--alt" id="how" aria-labelledby="how-title">
+  <div class="container k-container-wide">
+    <header class="k-section-head" data-reveal>
+      <span class="k-eyebrow">Zero to running</span>
+      <h2 class="k-h2" id="how-title">From download to <span class="k-heat-text">https://yoursite.test</span></h2>
+      <p class="k-lead">No package managers, no config archaeology, no “works on my machine”. Four steps and you’re building.</p>
+    </header>
+    <div class="k-steps">
+      <ol class="k-steps__list">
+        [[getImageList?
+          &tvname=`steps`
+          &docid=`[[*id]]`
+          &tpl=`migx.tpl.Step`
+        ]]
+      </ol>
+      <div class="k-steps__stage" aria-hidden="true">
+        [[getImageList?
+          &tvname=`steps`
+          &docid=`[[*id]]`
+          &tpl=`migx.tpl.StagePanel`
+        ]]
+      </div>
+    </div>
+  </div>
+</section>

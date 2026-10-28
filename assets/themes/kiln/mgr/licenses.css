@@ -1,0 +1,44 @@
+/* Extras → Kiln Licences (manager only). */
+.kilnlic-mono { font-family: "JetBrains Mono", Consolas, Menlo, monospace; font-size: 12px; }
+.kilnlic-dim { color: #8a8f98; }
+
+.kilnlic-pill {
+    display: inline-block; padding: 1px 8px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; line-height: 18px; text-transform: capitalize;
+    background: #eef0f3; color: #4a4f57;
+}
+.kilnlic-pill--active { background: #e3f6e8; color: #17692f; }
+.kilnlic-pill--revoked, .kilnlic-pill--blocked, .kilnlic-pill--cancelled { background: #fde7e7; color: #a11d1d; }
+.kilnlic-pill--expired, .kilnlic-pill--unverified { background: #fff1dc; color: #8a4b00; }
+
+.kilnlic-window .x-window-body { background: #fff; }
+.kilnlic-details h4 { margin: 18px 0 6px; font-size: 13px; font-weight: 600; }
+.kilnlic-dl { display: grid; grid-template-columns: 130px 1fr; gap: 6px 14px; margin: 0; }
+.kilnlic-dl dt { color: #6b7079; }
+.kilnlic-dl dd { margin: 0; word-break: break-word; }
+
+.kilnlic-serial {
+    width: 100%; box-sizing: border-box; padding: 8px 10px; resize: vertical;
+    font-family: "JetBrains Mono", Consolas, Menlo, monospace; font-size: 11px; line-height: 1.45;
+    word-break: break-all; border: 1px solid #dfe2e6; border-radius: 6px; background: #fbfbfc;
+}
+
+.kilnlic-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.kilnlic-table th, .kilnlic-table td { text-align: left; padding: 5px 8px; border-bottom: 1px solid #eceef1; vertical-align: top; }
+.kilnlic-table th { color: #6b7079; font-weight: 600; }
+.kilnlic-table td.kilnlic-mono { color: #6b7079; word-break: break-all; }
+
+.kilnlic-warn { margin: 0 0 10px; padding: 8px 10px; border-radius: 6px; background: #fff1dc; color: #6b3a00; }
+.kilnlic-hint { margin: 0 0 10px; color: #6b7079; }
+
+/* The sales switch above the tabs, and order states. */
+.kilnlic-sales { margin: 0 0 14px; }
+.kilnlic-sales .x-panel-body { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 16px; border-radius: 6px; background: #fff; }
+.kilnlic-sales__state { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.kilnlic-sales__actions { display: flex; gap: 8px; }
+.kilnlic-sales__btn { padding: 6px 14px; border-radius: 4px; border: 1px solid #d5d9df; background: #fff; cursor: pointer; font: inherit; }
+.kilnlic-sales__btn.primary-button { background: #6cb24a; border-color: #6cb24a; color: #fff; }
+.kilnlic-warn-inline { color: #a11d1d; }
+.kilnlic-pill--open { background: #e3f6e8; color: #17692f; }
+.kilnlic-pill--paused { background: #fff1dc; color: #8a4b00; }
+.kilnlic-pill--soon { background: #eef0f3; color: #4a4f57; }

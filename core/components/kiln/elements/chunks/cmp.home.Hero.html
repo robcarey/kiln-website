@@ -1,0 +1,36 @@
+<section class="k-hero" data-bs-theme="dark" aria-labelledby="hero-title">
+  <div class="k-hero__bg" aria-hidden="true">
+    <div class="k-hero__glow"></div>
+    <video class="k-hero__video" data-k-video autoplay muted loop playsinline preload="metadata" poster="[[++kiln.theme_url]]images/poster-hero.webp">
+      <source src="[[++kiln.theme_url]]video/kiln-hero-2.mp4" type="video/mp4">
+    </video>
+    <div class="k-hero__vignette"></div>
+    <div class="k-grain"></div>
+  </div>
+
+  <div class="container k-hero__inner">
+    <a class="k-pill k-rise" href="[[~[[++kiln.page_download]]]]">
+      <span class="k-pill__tag">v[[++kiln.current_version]]</span>
+      [[*heroEyebrow:default=`Now on Windows &amp; macOS`]]
+      <svg aria-hidden="true"><use href="#i-arrow-right"/></svg>
+    </a>
+    <h1 class="k-display k-rise" id="hero-title">
+      <span class="k-line">[[*heroTitle:default=`Heat up your`]]</span>
+      <span class="k-line k-heat-text k-heat-text--shimmer">[[*heroHighlight:default=`dev stack.`]]</span>
+    </h1>
+    <p class="k-lead k-hero__lead k-rise">[[*heroSubtitle:default=`Real Apache or nginx, any PHP version per site, MariaDB, trusted HTTPS and a mail catcher — running on your own machine in minutes. Self-contained from the very first click.`]]</p>
+    <div class="k-hero__ctas k-rise">
+      [[$cmp.DownloadButton]]
+      <a class="k-btn k-btn--ghost k-btn--lg" href="#features">See what’s inside</a>
+    </div>
+    <p class="k-hero__note k-rise">
+      <span><svg aria-hidden="true"><use href="#i-check"/></svg>Free for your first site</span>
+      <span><svg aria-hidden="true"><use href="#i-check"/></svg>Signed installers</span>
+      <span><svg aria-hidden="true"><use href="#i-check"/></svg>Windows · macOS Apple Silicon &amp; Intel</span>
+    </p>
+  </div>
+
+  <div class="container k-hero__stage k-rise k-rise--stage">
+    [[$cmp.AppMock]]
+  </div>
+</section>

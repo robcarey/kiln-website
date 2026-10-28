@@ -1,0 +1,23 @@
+<div class="k-buy">
+  [[+alert]]
+  <section class="k-card k-checkout" id="k-paddle" aria-labelledby="checkout-title"
+    data-token="[[+token]]" data-env="[[+env]]" data-txn="[[+txn]]" data-success="[[+success]]" data-auto="[[+auto]]">
+    [[+test:is=`1`:then=`<span class="k-badge">Paddle sandbox</span>`]]
+    <h2 class="k-cart__title" id="checkout-title">Pay for order [[+ref]]</h2>
+    <p class="k-auth__lede">Payment is handled by Paddle, our reseller, in a secure window over this page. Any sales tax or VAT for your country is added there before you pay.</p>
+    [[+test:is=`1`:then=`<div class="k-callout" role="note"><strong>Sandbox.</strong> No real money moves. Pay with Paddle’s test card 4242 4242 4242 4242, any future expiry date and CVC 100.</div>`]]
+    <table class="k-cart__table">
+      <tbody>[[+rows]]</tbody>
+      <tfoot><tr><th>Total before tax</th><td class="k-cart__money">[[+total]]</td></tr></tfoot>
+    </table>
+    <p class="k-checkout__closed" role="status" hidden>The payment window was closed. Nothing was charged; you can open it again or cancel the order.</p>
+    <div class="k-checkout__actions">
+      <button class="k-btn k-btn--heat k-btn--lg" type="button" data-paddle-open>Pay securely</button>
+      <form method="post">
+        <input type="hidden" name="csrf" value="[[+csrf]]"><input type="hidden" name="do" value="cancel"><input type="hidden" name="order" value="[[+ref]]">
+        <button class="k-btn k-btn--ghost k-btn--lg" type="submit">Cancel order</button>
+      </form>
+    </div>
+    <noscript><p class="k-auth__hint">Paddle’s checkout needs JavaScript. Please turn it on for this page.</p></noscript>
+  </section>
+</div>

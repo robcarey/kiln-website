@@ -1,0 +1,20 @@
+[[$cmp.Head]]
+<body class="kiln-web tpl-interior page-[[*alias]]" id="top">
+[[$cmp.Header]]
+<main id="main">
+  [[$cmp.PageHero]]
+  <div class="k-page">
+    <div class="container k-container-wide">
+      <div class="k-page__grid[[*showToc:is=`1`:then=` has-toc`]]">
+        [[*showToc:is=`1`:then=`<aside class="k-toc" aria-label="On this page"><h4>On this page</h4><ol data-k-toc></ol></aside>`]]
+        <article class="k-prose[[*proseWide:is=`1`:then=` k-prose--wide`]]">
+          [[*introtext:notempty=`<p class="k-lead">[[*introtext]]</p>`]]
+          [[*content]]
+        </article>
+      </div>
+    </div>
+  </div>
+  [[*showCta:isnot=`0`:then=`[[$cmp.CtaBand]]`:else=``]]
+</main>
+[[$cmp.Footer]]
+[[$cmp.Scripts]]

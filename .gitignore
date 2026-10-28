@@ -1,0 +1,14 @@
+# Track only Kiln's own code; MODX core, config, caches and extras stay out.
+/*
+!/.gitignore
+!/core/
+/core/*
+!/core/components/
+/core/components/*
+!/core/components/kiln/
+/core/components/kiln/vendor/
+!/assets/
+/assets/*
+!/assets/themes/
+/assets/themes/*
+!/assets/themes/kiln/

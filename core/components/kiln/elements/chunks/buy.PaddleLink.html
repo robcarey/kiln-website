@@ -1,0 +1,14 @@
+<div class="k-buy">
+  [[+alert]]
+  <section class="k-card k-checkout" id="k-paddle" aria-labelledby="checkout-title"
+    data-token="[[+token]]" data-env="[[+env]]" data-txn="[[+txn]]" data-success="[[+success]]" data-auto="[[+auto]]">
+    <h2 class="k-cart__title" id="checkout-title">Your Kiln Pro billing</h2>
+    <p class="k-auth__lede">Paddle, who handles payment for us, opens a secure window over this page to update your card or pay what’s due.</p>
+    <p class="k-checkout__closed" role="status" hidden>The payment window was closed. You can open it again whenever you’re ready.</p>
+    <div class="k-checkout__actions">
+      <button class="k-btn k-btn--heat k-btn--lg" type="button" data-paddle-open>Open the secure window</button>
+      <a class="k-btn k-btn--ghost k-btn--lg" href="[[+url_account]]">Go to your account</a>
+    </div>
+    <noscript><p class="k-auth__hint">Paddle’s checkout needs JavaScript. Please turn it on for this page.</p></noscript>
+  </section>
+</div>

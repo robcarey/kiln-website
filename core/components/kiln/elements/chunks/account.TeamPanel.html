@@ -1,0 +1,19 @@
+<section class="k-card k-team">
+  <header class="k-lic__head">
+    <div>
+      <div class="k-lic__plan">[[+name]]</div>
+      <div class="k-lic__id">[[+id]] · [[+term]]</div>
+    </div>
+    <span class="k-badge">[[+used]] of [[+seats]] seats used</span>
+  </header>
+  <ul class="k-team__members">[[+members:default=`<li class="k-auth__hint">No one has a seat yet. Add yourself or your team below.</li>`]]</ul>
+  [[+full:is=`1`:then=`<p class="k-auth__hint">Every seat is in use. Remove someone to free a seat.</p>`:else=`<form class="k-form k-team__add" method="post">
+    <input type="hidden" name="csrf" value="[[+csrf]]"><input type="hidden" name="do" value="team_add"><input type="hidden" name="team" value="[[+id]]">
+    <label class="form-label" for="add-[[+id]]">Give a seat to</label>
+    <div class="k-lic__keyrow">
+      <input class="form-control" type="email" name="email" id="add-[[+id]]" placeholder="name@company.com" required>
+      <button class="k-btn k-btn--heat k-btn--sm" type="submit">Add</button>
+    </div>
+    <div class="k-auth__hint">They get their own licence key by email. [[+free]] seat(s) free.</div>
+  </form>`]]
+</section>

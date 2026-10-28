@@ -1,0 +1,18 @@
+<div class="k-auth">
+  <div class="k-card k-auth__card">
+    <h2 class="k-auth__title">Sign in to Kiln</h2>
+    <p class="k-auth__lede">Your licences, downloads and team, all in one place.</p>
+    [[+alert]]
+    [[+social]]
+    <form class="k-form k-auth__form" method="post" action="[[+url_signin]]" novalidate>
+      <input type="hidden" name="csrf" value="[[+csrf]]">
+      <label class="form-label" for="email">Email</label>
+      <input class="form-control" type="email" name="email" id="email" value="[[+email]]" autocomplete="email" required autofocus>
+      <div class="k-auth__row"><label class="form-label" for="password">Password</label><a class="k-auth__small" href="[[+url_forgot]]">Forgot it?</a></div>
+      <input class="form-control" type="password" name="password" id="password" autocomplete="current-password">
+      <button class="k-btn k-btn--heat k-btn--block" type="submit" name="mode" value="password">Sign in</button>
+      <button class="k-btn k-btn--ghost k-btn--block" type="submit" name="mode" value="code" formnovalidate><svg aria-hidden="true"><use href="#i-mail"/></svg>Email me a sign-in code instead</button>
+    </form>
+    <p class="k-auth__foot">New to Kiln? <a href="[[+url_register]]">Create an account</a></p>
+  </div>
+</div>

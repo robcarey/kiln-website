@@ -1,0 +1,18 @@
+{
+    "name": "kilndev/kiln-website",
+    "description": "kilndev.com: accounts, licences and checkout for the Kiln website (MODX namespace kiln).",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.3",
+        "hybridauth/hybridauth": "^3.12"
+    },
+    "autoload": {
+        "psr-4": { "KilnWeb\\": "src/" }
+    },
+    "config": {
+        "platform": { "php": "8.3.6" },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

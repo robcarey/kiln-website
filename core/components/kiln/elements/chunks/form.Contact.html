@@ -1,0 +1,47 @@
+[[!FormIt?
+  &hooks=`spam,email`
+  &emailTpl=`email.ContactNotify`
+  &emailTo=`[[++kiln.support_email]]`
+  &emailFrom=`[[++emailsender]]`
+  &emailFromName=`[[++site_name]] website`
+  &emailReplyTo=`[[+email]]`
+  &emailSubject=`Kiln website: [[+topic]]`
+  &validate=`name:required:maxLength=^100^,email:email:required,topic:required,message:required:maxLength=^5000^,website:blank`
+  &successMessage=`<div class="k-callout"><strong>Thanks — your message is on its way.</strong> We’ll reply to the email address you gave.</div>`
+  &clearFieldsOnSuccess=`1`
+  &store=`0`
+]]
+[[!+fi.successMessage]]
+[[!+fi.validation_error_message:notempty=`<div class="k-callout" role="alert">[[!+fi.validation_error_message]]</div>`]]
+<form class="k-form" action="[[~[[*id]]]]#contact-form" method="post" id="contact-form" novalidate>
+  <div class="k-hp" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" name="website" id="website" tabindex="-1" autocomplete="off" value=""></div>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label" for="name">Your name</label>
+      <input class="form-control" type="text" name="name" id="name" value="[[!+fi.name]]" autocomplete="name" required>
+      [[!+fi.error.name:notempty=`<div class="k-error">[[!+fi.error.name]]</div>`]]
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="email">Email</label>
+      <input class="form-control" type="email" name="email" id="email" value="[[!+fi.email]]" autocomplete="email" required>
+      [[!+fi.error.email:notempty=`<div class="k-error">[[!+fi.error.email]]</div>`]]
+    </div>
+    <div class="col-12">
+      <label class="form-label" for="topic">Topic</label>
+      <select class="form-select" name="topic" id="topic" required>
+        <option value="Question" [[!+fi.topic:FormItIsSelected=`Question`]]>A question about Kiln</option>
+        <option value="Support" [[!+fi.topic:FormItIsSelected=`Support`]]>Help with Kiln</option>
+        <option value="Licensing" [[!+fi.topic:FormItIsSelected=`Licensing`]]>Licensing &amp; Pro</option>
+        <option value="Feedback" [[!+fi.topic:FormItIsSelected=`Feedback`]]>Feedback or an idea</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <label class="form-label" for="message">Message</label>
+      <textarea class="form-control" name="message" id="message" rows="6" required>[[!+fi.message]]</textarea>
+      [[!+fi.error.message:notempty=`<div class="k-error">[[!+fi.error.message]]</div>`]]
+    </div>
+    <div class="col-12">
+      <button class="k-btn k-btn--heat k-btn--lg" type="submit">Send message<svg aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+    </div>
+  </div>
+</form>

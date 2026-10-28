@@ -1,0 +1,24 @@
+<div class="k-auth">
+  <div class="k-card k-auth__card">
+    <h2 class="k-auth__title">Create your Kiln account</h2>
+    <p class="k-auth__lede">Buy and manage licences, and keep your keys safe.</p>
+    [[+alert]]
+    [[+social]]
+    <form class="k-form k-auth__form" method="post" action="[[+url_register]]" novalidate>
+      <input type="hidden" name="csrf" value="[[+csrf]]">
+      <label class="form-label" for="name">Your name</label>
+      <input class="form-control" type="text" name="name" id="name" value="[[+name]]" autocomplete="name" maxlength="100" required autofocus>
+      <label class="form-label" for="email">Email</label>
+      <input class="form-control" type="email" name="email" id="email" value="[[+email]]" autocomplete="email" required>
+      <label class="form-label" for="password">Password</label>
+      <input class="form-control" type="password" name="password" id="password" autocomplete="new-password" minlength="[[+min_length]]" required>
+      <div class="k-auth__hint">At least [[+min_length]] characters.</div>
+      <label class="form-label" for="password_confirm">Password again</label>
+      <input class="form-control" type="password" name="password_confirm" id="password_confirm" autocomplete="new-password" required>
+      [[+turnstile]]
+      <button class="k-btn k-btn--heat k-btn--block" type="submit">Create account</button>
+      <p class="k-auth__hint">We’ll email you a 4-letter code to confirm your address.</p>
+    </form>
+    <p class="k-auth__foot">Already have an account? <a href="[[+url_signin]]">Sign in</a></p>
+  </div>
+</div>

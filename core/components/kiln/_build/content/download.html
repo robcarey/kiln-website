@@ -1,0 +1,14 @@
+[[$cmp.DownloadCards]]
+<h2>After you install</h2>
+<ol>
+  <li>Open Kiln. The setup check runs and walks you through anything that needs a fix.</li>
+  <li>Kiln asks for administrator permission when it installs its local certificate authority and updates the hosts file with your site names.</li>
+  <li>Add your first site — or install WordPress, MODX, Joomla or Grav with Pro — and open it over HTTPS.</li>
+</ol>
+<h2>Verify your download</h2>
+<p>Each installer is signed. You can also compare its SHA-256 checksum with the value above:</p>
+<pre><code># Windows (PowerShell)
+Get-FileHash .\Kiln-[[++kiln.current_version]]-setup.exe -Algorithm SHA256
+
+# macOS
+shasum -a 256 ~/Downloads/Kiln-[[++kiln.current_version]]-arm64.dmg</code></pre>

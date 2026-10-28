@@ -1,0 +1,25 @@
+<article class="k-card k-lic k-lic--[[+status_class]]">
+  <header class="k-lic__head">
+    <div>
+      <div class="k-lic__plan">[[+plan]]</div>
+      <div class="k-lic__id">[[+license_id]]</div>
+    </div>
+    <span class="k-lic__status">[[+status]]</span>
+  </header>
+  <dl class="k-lic__facts">
+    <div><dt>Issued</dt><dd>[[+issued]]</dd></div>
+    <div><dt>Term</dt><dd>[[+term]]</dd></div>
+    [[+team:notempty=`<div><dt>Team</dt><dd>[[+team]]</dd></div>`]]
+  </dl>
+  [[+usable:is=`1`:then=`<div class="k-lic__key">
+    <label class="form-label" for="key-[[+id]]">Licence key <span class="k-auth__hint">paste into Kiln → Settings → License</span></label>
+    <div class="k-lic__keyrow">
+      <input class="form-control k-lic__serial" id="key-[[+id]]" type="text" value="[[+serial]]" readonly spellcheck="false">
+      <button class="k-btn k-btn--ghost k-btn--sm" type="button" data-k-copy="#key-[[+id]]"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button>
+    </div>
+    <form method="post" class="k-lic__mail">
+      <input type="hidden" name="csrf" value="[[+csrf]]"><input type="hidden" name="do" value="email_key"><input type="hidden" name="license" value="[[+id]]">
+      <button class="k-linkbtn" type="submit">Email me this key</button>
+    </form>
+  </div>`]]
+</article>

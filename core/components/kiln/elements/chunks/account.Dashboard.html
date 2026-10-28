@@ -1,0 +1,33 @@
+<div class="k-account">
+  <div class="k-account__head">
+    <div>
+      <h2 class="k-account__hello">Hi, [[+name]]</h2>
+      <p class="k-auth__lede">[[+email]]</p>
+    </div>
+    <a class="k-btn k-btn--ghost k-btn--sm" href="[[+url_signout]]"><svg aria-hidden="true"><use href="#i-log-out"/></svg>Sign out</a>
+  </div>
+  [[+alert]]
+
+  <h3 class="k-account__h">Your licences</h3>
+  [[+trial]]
+  [[+licence_count:is=`0`:then=`<div class="k-card k-account__empty">
+    <p>You don’t have a Kiln Pro licence on this account yet. Kiln is free for your first site; Pro takes the limits off.</p>
+    <a class="k-btn k-btn--heat" href="[[+url_buy]]">Get Kiln Pro</a>
+  </div>`:else=`<div class="k-lics">[[+licences]]</div>`]]
+
+  [[+teams:notempty=`<h3 class="k-account__h">Teams you manage</h3><div class="k-lics">[[+teams]]</div>`]]
+
+  [[+orders:notempty=`<h3 class="k-account__h">Orders</h3><section class="k-card k-orders"><ul class="k-team__members">[[+orders]]</ul></section>`]]
+
+  <div class="k-account__grid">
+    <section class="k-card k-account__box">
+      <h3 class="k-account__h">Download Kiln</h3>
+      <p>Signed installers for Windows and both kinds of Mac.</p>
+      <a class="k-btn k-btn--ghost k-btn--sm" href="[[+url_download]]"><svg aria-hidden="true"><use href="#i-download"/></svg>Downloads</a>
+    </section>
+    [[+connections:notempty=`<section class="k-card k-account__box">
+      <h3 class="k-account__h">Sign-in options</h3>
+      <ul class="k-account__connections">[[+connections]]</ul>
+    </section>`]]
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="k-auth">
+  <div class="k-card k-auth__card">
+    <h2 class="k-auth__title">One more step</h2>
+    <p class="k-auth__lede">[[+provider]] didn’t share a confirmed email with us. Enter the email for your Kiln account and we’ll send a 4-letter code to confirm it.</p>
+    [[+alert]]
+    <form class="k-form k-auth__form" method="post" action="[[+url_connect]]" novalidate>
+      <input type="hidden" name="csrf" value="[[+csrf]]">
+      <label class="form-label" for="email">Email</label>
+      <input class="form-control" type="email" name="email" id="email" autocomplete="email" required autofocus>
+      <button class="k-btn k-btn--heat k-btn--block" type="submit">Send my code</button>
+    </form>
+    <p class="k-auth__foot"><a href="[[+url_signin]]">Cancel</a></p>
+  </div>
+</div>

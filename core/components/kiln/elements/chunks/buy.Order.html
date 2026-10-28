@@ -1,0 +1,18 @@
+<div class="k-buy">
+  [[+alert]]
+  <section class="k-card k-checkout k-checkout--[[+status]]" aria-labelledby="order-title">
+    <span class="k-lic__id">Order [[+ref]]</span>
+    <h2 class="k-cart__title" id="order-title">[[+title]]</h2>
+    <p class="k-auth__lede">[[+text]]</p>
+    [[+licences:notempty=`<ul class="k-order__lics">[[+licences]]</ul>`]]
+    <table class="k-cart__table">
+      <tbody>[[+rows]]</tbody>
+      <tfoot><tr><th>Total</th><td class="k-cart__money">[[+total]]</td></tr></tfoot>
+    </table>
+    <div class="k-checkout__actions">
+      [[+url_checkout:notempty=`<a class="k-btn k-btn--heat" href="[[+url_checkout]]">Return to checkout</a>`]]
+      <a class="k-btn [[+url_checkout:notempty=`k-btn--ghost`:default=`k-btn--heat`]]" href="[[+url_account]]">Go to your account</a>
+      [[+status:is=`pending`:then=`<a class="k-btn k-btn--ghost" href="[[+url_self]]">Refresh</a>`]][[+status:is=`paid`:then=`<a class="k-btn k-btn--ghost" href="[[+url_self]]">Refresh</a>`]]
+    </div>
+  </section>
+</div>

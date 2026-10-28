@@ -1,0 +1,22 @@
+<div class="k-buy">
+  [[+alert]]
+  <section class="k-card k-checkout" aria-labelledby="checkout-title">
+    <span class="k-badge">Test payment</span>
+    <h2 class="k-cart__title" id="checkout-title">Pay for order [[+ref]]</h2>
+    <p class="k-auth__lede">This is Kiln’s pretend checkout for testing: no card, no money. A real payment provider’s page takes its place at launch.</p>
+    <table class="k-cart__table">
+      <tbody>[[+rows]]</tbody>
+      <tfoot><tr><th>Total</th><td class="k-cart__money">[[+total]]</td></tr></tfoot>
+    </table>
+    <div class="k-checkout__actions">
+      <form method="post">
+        <input type="hidden" name="csrf" value="[[+csrf]]"><input type="hidden" name="do" value="test_pay"><input type="hidden" name="order" value="[[+ref]]">
+        <button class="k-btn k-btn--heat k-btn--lg" type="submit">Pay [[+total]] (test)</button>
+      </form>
+      <form method="post">
+        <input type="hidden" name="csrf" value="[[+csrf]]"><input type="hidden" name="do" value="test_cancel"><input type="hidden" name="order" value="[[+ref]]">
+        <button class="k-btn k-btn--ghost k-btn--lg" type="submit">Cancel</button>
+      </form>
+    </div>
+  </section>
+</div>

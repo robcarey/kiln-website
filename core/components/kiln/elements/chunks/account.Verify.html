@@ -1,0 +1,23 @@
+<div class="k-auth">
+  <div class="k-card k-auth__card">
+    <h2 class="k-auth__title">[[+heading]]</h2>
+    <p class="k-auth__lede">If <strong>[[+email]]</strong> has an account, a 4-letter code is on its way. Enter it below [[+why]].</p>
+    [[+alert]]
+    <form class="k-form k-auth__form" method="post" action="[[+url_verify]]" novalidate>
+      <input type="hidden" name="csrf" value="[[+csrf]]">
+      <label class="form-label" for="code">Code</label>
+      <input class="form-control k-code" type="text" name="code" id="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" maxlength="4" placeholder="ABCD" required autofocus>
+      [[+is_reset:is=`1`:then=`<label class="form-label" for="password">New password</label>
+      <input class="form-control" type="password" name="password" id="password" autocomplete="new-password" minlength="[[+min_length]]" required>
+      <div class="k-auth__hint">At least [[+min_length]] characters.</div>
+      <label class="form-label" for="password_confirm">New password again</label>
+      <input class="form-control" type="password" name="password_confirm" id="password_confirm" autocomplete="new-password" required>`]]
+      <button class="k-btn k-btn--heat k-btn--block" type="submit">Continue</button>
+    </form>
+    <form class="k-auth__resend" method="post" action="[[+url_verify]]">
+      <input type="hidden" name="csrf" value="[[+csrf]]">
+      No email? Check your spam folder, or <button type="submit" name="do" value="resend" class="k-linkbtn">send a new code</button>.
+    </form>
+    <p class="k-auth__foot"><a href="[[+url_signin]]">Use a different email</a></p>
+  </div>
+</div>
